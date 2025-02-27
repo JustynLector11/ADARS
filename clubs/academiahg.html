@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Integral HG</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #69CDEF;
+        }
+        
+        header {
+            background: #FFD700;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            font-size: 24px;
+            font-family: Arial Black, sans-serif;
+        }
+        .container {
+            max-width: 900px; 
+            margin: 20px auto; /* Aumenta la separación con los bordes */
+            padding: 20px;
+            line-height: 1.6; /* Espaciado entre líneas */
+  
+        }
+
+        .container img{
+            width: 100%; /* La imagen se ajusta al ancho */
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px; /* Bordes redondeados opcionales */
+        }
+        
+        .social a {
+            margin: 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .social img{
+            width: 40px; /* Tamaño fijo para los íconos */
+            height: 40px; /* Asegura que sean cuadrados */
+            margin: 5px; /* Espaciado entre los íconos */
+            vertical-align: middle;
+            
+        }
+        .scroll-effect {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+        
+        .scroll-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .header-image {
+            width: 100%;
+            max-height: 700px;
+            object-fit: cover;
+        }
+        p {
+            margin-bottom: 20px; /* Espaciado entre párrafos */
+            font-size: 22px;
+        }
+        
+        h2 {
+            margin-top: 25px; /* Espaciado superior de los títulos */
+            margin-bottom: 15px;
+        }
+        #breadcrumb {
+            font-size: 16px; /* Tamaño del texto */
+            margin: 0px 0; /* Espaciado arriba y abajo */
+            padding: 10px; /* Espaciado interno */
+            background: #0A1828; /* Color de fondo */
+            border-radius: 0px; /* Bordes redondeados */
+        }
+          
+        #breadcrumb a {
+           color: #BFA181; /* Color azul para los enlaces */
+            text-decoration: none; /* Sin subrayado */
+            font-weight: bold;
+        }
+          
+        #breadcrumb a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+        }
+          
+        #breadcrumb span {
+            color: #333; /* Último elemento sin enlace en color oscuro */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>ACADEMIA INTEGRAL HG</header>
+     
+    <img src="/img/hg4.jpg" alt="Imagen de encabezado" class="header-image">
+
+
+    <nav id="breadcrumb"></nav>
+    <div class="container">
+
+         <h2 class="scroll-effect">SOBRE NOSOTROS</h2>
+         <p class="scroll-effect"> LA ACADEMIA INTEGRAL HAROLD
+            GUZMAN tiene como finalidad
+            fomentar la práctica de la
+            actividad física a través del
+            atletismo en nuestra provincia y
+            región.
+         </p>
+         <p class="scroll-effect"> Por un lado, se busca tener un mayor
+            impacto en la sociedad, así como
+            descubrir y apoyar a talentos en esta
+            disciplina, teniendo como base y
+            motivación, la formación con enfoque en
+            resultados de los niños, jóvenes y
+            adultos. 
+         </p>
+            
+         <p class="scroll-effect"> Es importante
+            informar que la Academia cuenta con un
+            equipo humano de aproximadamente de
+            40 personas, de edades variadas,
+            nuestros atletas han obtenido varios
+            logros tanto dentro como fuera de
+            nuestra ciudad.  
+         </p>
+         <img class="scroll-effect " src="/img/POLO 2025-9.jpg" alt="Harold Guzman" style="width: 50%; margin: 10px;">
+
+
+         <h2 class="scroll-effect">MISION</h2>
+         <p class="scroll-effect">Fomentar la actividad física a
+            través del ATLETISMO en los niveles
+            Formativo, participativo y de
+            competencia en los Niños, jóvenes
+            y adultos permitiendo el
+            descubrimiento de Nuevos talentos
+            en la ciudad de chimbote.
+         </p>
+         <img class="scroll-effect " src="/img/hg2.jpg" alt="Harold Guzman" max-height="300px" style="width: 70%; margin: 10px;">
+
+
+
+         <h2 class="scroll-effect">VISION</h2>
+         <p class="scroll-effect">Generar un impacto en la
+            sociedad mediante la formación
+            INTEGRAL del ATLETISMO en las
+            personas, así mismo GESTAR
+            LIDERES DEPORTIVOS como
+            agentes de cambio en la cultura
+            de Nuestra Región.
+         </p>   
+         <img class="scroll-effect" src="/img/POLO 2025-8.jpg" alt="Harold Guzman" style="width: 70%; margin: 10px;">
+
+
+         <h2 class="scroll-effect">AREAS DEPORTIVAS</h2>
+         <p class="scroll-effect">Running. </p>
+
+        
+         <h2 class="scroll-effect">CONTACTO</h2>
+         <div class="social">
+            <a href="mailto:academiaintegralhg@gmail.com" target="_blank"><img src="/logos/gmail.jpg" alt="Gmail"></a>
+            <a href="https://www.instagram.com/academiaintegralhg?igsh=MXd2aXZoMTJrZ3dqbw==" target="_blank"><img src="/logos/instagram.jpg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/CoachHaroldGuzman" target="_blank"><img src="/logos/facebook.png" alt="Facebook" ></a>
+            <a href="https://wa.me/51939818689" target="_blank"><img src="/logos/whatsapp.jpg" alt="Whatsapp"></a>
+         </div> 
+
+
+    </div>
+
+
+    <script src="/breadcrumb.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".scroll-effect");
+        
+            function checkScroll() {
+                const triggerHeight = window.innerHeight * 0.85; // 85% de la pantalla
+        
+                elements.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    if (elementTop < triggerHeight) {
+                        el.classList.add("scroll-visible");
+                    }
+                });
+            }
+        
+            window.addEventListener("scroll", checkScroll);
+            checkScroll(); // Llamar al cargar la página
+        });
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,532 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0A1828;
+}
+
+#breadcrumb {
+  font-size: 16px;
+  /* Tamaño del texto */
+  margin: 5px 0;
+  /* Espaciado arriba y abajo */
+  padding: 10px;
+  /* Espaciado interno */
+  background: #f8f9fa;
+  /* Color de fondo */
+  border-radius: 5px;
+  /* Bordes redondeados */
+}
+
+#breadcrumb a {
+  color: #00ff4c;
+  /* Color azul para los enlaces */
+  text-decoration: none;
+  /* Sin subrayado */
+  font-weight: bold;
+}
+
+#breadcrumb a:hover {
+  text-decoration: underline;
+  /* Subrayado al pasar el mouse */
+}
+
+#breadcrumb span {
+  color: #333;
+  /* Último elemento sin enlace en color oscuro */
+  font-weight: bold;
+}
+
+
+/* ---- SIDEBAR ---- */
+.sidebar {
+  position: fixed;
+  left: -210px;
+  top: 0;
+  width: 210px;
+  /* Ancho del menú */
+  height: 45%;
+  background-color: #222;
+  transition: left 0.3s ease-in-out;
+  padding-top: 60px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 800;
+  overflow: visible;
+}
+
+.sidebar a {
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background 0.3s;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background-color: #444;
+  padding-left: 25px;
+  /* Efecto de desplazamiento */
+}
+
+
+/* ---- SUBMENÚ ---- */
+.submenu {
+  position: absolute;
+  left: 100%; /* Se muestra a la derecha del menú principal */
+  top: 0;
+  background-color: #f1f1f1;
+  width: 230px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+  max-height: 400px; /* Ajusta la altura */
+  overflow-y: auto; /* Permite scroll si hay muchos elementos */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+  z-index: 1000;
+}
+
+.submenu.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.submenu a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  color: black;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
+}
+
+/* Mostrar el submenú al pasar el mouse */
+.menu-item {
+  position: relative;
+}
+
+.menu-item:hover .submenu {
+  max-height: 500px;
+  /* Se expande */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Flecha animada */
+.flecha {
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover .flecha {
+  transform: rotate(180deg);
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 60px;
+  background-color: #0A1828;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 90%;
+  /* Ajusta el ancho al 80% del contenedor */
+  max-width: 1350px;
+  /* Define un ancho máximo */
+  height: 80vh;
+  /* Ajusta la altura para ocupar el 80% de la pantalla */
+  max-height: none;
+  /* Evita restricciones en la altura */
+  object-fit: cover;
+  /* Recorta la imagen para que se adapte sin distorsionarse */
+  margin: auto;
+  /* Centra la imagen en el carrusel */
+  display: block;
+  /* Asegura que el margen automático funcione */
+}
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  /* Reduce el ancho */
+  height: 40px;
+  /* Reduce la altura */
+  top: 50%;
+  /* transform: translateY(550%); Ajusta el centrado exacto */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Ajusta la opacidad */
+  border-radius: 50%;
+  /* Hace los botones más redondos */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 20px;
+  /* Reduce el tamaño del icono */
+  height: 20px;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+
+.content {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+}
+
+.navbar {
+  background-color: #178582;
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  padding: 15px 20px;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+}
+
+.menu-icon:hover {
+  transform: scale(1.1);
+}
+
+#noticias {
+  background-color: #178582;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #0A1828;
+}
+
+.noticia {
+  background: #9dd6c6;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #b6cfe7;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.noticia:hover {
+  background: #B6E1E7;
+}
+
+.icono-menu {
+  width: 18px;
+  /* Tamaño del icono */
+  height: 16px;
+  margin-right: 8px;
+  /* Espacio entre icono y texto */
+  vertical-align: middle;
+  /* Alineación correcta */
+}
+
+.dropdown-item img {
+  width: 16px;
+  /* Ajusta el tamaño del icono */
+  height: 16px;
+  margin-right: 8px;
+  /* Espacio entre el icono y el texto */
+  vertical-align: middle;
+  /* Alinea correctamente con el texto */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  /* Reduce más el padding */
+  line-height: 1;
+  height: 30px;
+  /* Ajusta la altura manualmente */
+}
+
+.dropdown-item::before {
+  content: none !important;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding-left: 0;
+  /* Asegura que no tenga indentación */
+}
+
+#evento-seleccionado {
+  width: 60%;
+  /* Reduce el ancho */
+  max-width: 600px;
+  /* Máximo ancho */
+  margin: 30px auto;
+  /* Centra horizontalmente */
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#evento-seleccionado img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+
+#evento-seleccionado:empty {
+  display: none;
+}
+
+
+.evento-estilizado {
+  position: relative;
+  z-index: 5;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+  /* Puedes cambiar el color al pasar el cursor, si quieres */
+}
+
+.container {
+  max-width: 1100px;
+  margin-top: 40px;
+  /* Reduce el margen superior */
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+
+.months {
+  margin-bottom: 20px;
+}
+
+.months button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.months button:hover {
+  background-color: #ddd;
+}
+
+.eventos-mes {
+  display: none;
+  /* Ocultar todos los eventos inicialmente */
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-img-top {
+  width: 100%;
+  /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+  height: 200px;
+  /* Altura fija para que todas las imágenes tengan la misma altura */
+  object-fit: cover;
+  /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+
+.card {
+  height: 350px;
+  /* Altura mínima para que todas las tarjetas tengan el mismo tamaño */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.mes {
+  margin-bottom: 20px;
+}
+
+.evento {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.evento p {
+  margin: 5px 0;
+}
+
+
+/* Estilo para la flechita */
+.flecha {
+  font-size: 12px;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.section-title {
+  position: sticky;
+  top: 0;
+  background-color: #178582;
+  z-index: 100;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  /* Prueba con valores más pequeños */
+}
+
+
+.event {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.event:last-child {
+  border-bottom: none;
+}
+
+.event img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.event a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.event a:hover {
+  color: #ff6600;
+}
+
+/* Estilo del contenido del evento */
+#contenido-evento {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-right: 10px;
+  /* Agrega algo de espacio a la derecha para evitar que la barra se superponga */
+}
+
+/* 🔹 Menú lateral en móviles */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px; /* Oculto fuera de la pantalla */
+    width: 250px; 
+    height: 100%;
+  }
+  
+  .sidebar.active {
+    left: 0; /* Mostrar cuando se active */
+  }
+
+  /* Botón para abrir el menú */
+  .menu-toggle {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
+
+/* 🔹 Submenús adaptados para móviles */
+@media (max-width: 768px) {
+  .submenu {
+    position: relative;
+    width: 100%;
+    left: 0;
+    background: #333;
+  }
+}
+
+/* 🔹 Carrusel que se ajusta en móviles */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: auto;
+    max-height: 400px;
+  }
+}
+
+/* 🔹 Contenido y eventos responsivos */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: none;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  #evento-seleccionado {
+    width: 90%;
+    max-width: 100%;
+  }
+}

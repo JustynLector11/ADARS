@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Ciclismo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0A1828;
+            text-align: center;
+        }
+
+        .eventos-mes {
+            display: none; /* Inicialmente oculto */
+        }
+
+        .card {
+            height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+        }
+        
+        .card-img-top {
+            height: 200px; /* Ajusta la altura de la imagen según necesites */
+            object-fit: cover; /* Recorta la imagen sin deformarla */
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .titulo-eventos{
+            color: #BFA181;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        p{
+            font-size: 25px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="titulo-eventos"><strong>Eventos de Ciclismo</strong></h1>
+
+    <p> Aún no hay eventos</p>
+    <!-- Eventos de Febrero 
+    <div id="ciclismo" class="eventos-ciclismo" style="display: block;">
+        <div class="container">
+            <div class="row">
+                 Evento 1 
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <a href="javascript:void(0);" >
+                            <img src="/img/duatlon.jpeg" class="card-img-top" alt="La Real Pichanga">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text"><strong>23/02/2025</strong></p>
+                            <p><strong>La Real Pichanga</strong></p>
+                            <a href="/eventos/duatlonchb.html"class="btn btn-primary"> Ver Duatlón</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        function mostrarEventosCiclismo() {
+            document.getElementById("ciclismo").style.display = "block";
+        }
+    </script>
+</body>
+</html>
