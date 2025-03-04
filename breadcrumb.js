@@ -1,28 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     let breadcrumb = document.getElementById("breadcrumb");
-    let pathArray = window.location.pathname.split("/").filter(p => p); // Divide la URL en partes
+    let repoBase = "/adars"; // Ajusta el nombre del repositorio si lo cambias en GitHub Pages
+    let pathArray = window.location.pathname.replace(repoBase, "").split("/").filter(p => p);
 
-    let capitalize = (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(); // Capitaliza solo la primera letra
+    let capitalize = (word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 
-    let breadcrumbHTML = `<a href="/ADARS/index.html">Inicio</a>`; // Enlace al inicio
+    let breadcrumbHTML = `<a href="${repoBase}/index.html">Inicio</a>`;
 
-    // Si estamos en un mes (ejemplo: eventos/2025/marzo/ o eventos/2025/marzo/index.html)
     if ((pathArray.length === 3 || (pathArray.length === 4 && pathArray[3] === "index.html")) 
         && pathArray[0] === "eventos" && pathArray[1] === "2025") {
         
-        let mes = capitalize(pathArray[2]); // Convierte solo la primera letra en mayúscula
+        let mes = capitalize(pathArray[2]);
         breadcrumbHTML += ` » <span>${mes}</span>`;
     }
 
-    // Si estamos en un evento (ejemplo: eventos/2025/marzo/evento.html)
     if (pathArray.length === 4 && pathArray[0] === "eventos" && pathArray[1] === "2025" && pathArray[3] !== "index.html") {
-        let mes = capitalize(pathArray[2]); // Convierte solo la primera letra en mayúscula
+        let mes = capitalize(pathArray[2]);
         let evento = pathArray[3]
             .replace(".html", "")
             .replace(/-/g, " ")
             .replace(/\b\w/g, c => c.toUpperCase());
 
-        breadcrumbHTML += ` » <a href="/ADARS/eventos/2025/${pathArray[2]}/">${mes}</a> » <span>${evento}</span>`;
+        breadcrumbHTML += ` » <a href="${repoBase}/eventos/2025/${pathArray[2]}/">${mes}</a> » <span>${evento}</span>`;
     }
 
     breadcrumb.innerHTML = breadcrumbHTML;
