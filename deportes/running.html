@@ -54,12 +54,35 @@
             margin-top: 20px;
             margin-bottom: 40px;
         }
+        #breadcrumb {
+            font-size: 16px; /* Tamaño del texto */
+            margin: 0px 0; /* Espaciado arriba y abajo */
+            padding: 10px; /* Espaciado interno */
+            background: #0A1828; /* Color de fondo */
+            border-radius: 0px; /* Bordes redondeados */
+        }
+          
+        #breadcrumb a {
+           color: #BFA181; /* Color azul para los enlaces */
+            text-decoration: none; /* Sin subrayado */
+            font-weight: bold;
+        }
+          
+        #breadcrumb a:hover {
+            text-decoration: underline; /* Subrayado al pasar el mouse */
+        }
+          
+        #breadcrumb span {
+            color: #333; /* Último elemento sin enlace en color oscuro */
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <h1 class="titulo-eventos"><strong>Eventos de Running</strong></h1>
     <img src="/adars/img/running.webp" alt="Imagen de encabezado" class="header-image"> 
+    <nav id="breadcrumb"></nav>
 
     <!-- Eventos de Running -->
     <div id="running" class="eventos-running" style="display: block;">
@@ -144,5 +167,6 @@
             document.getElementById("running").style.display = "block";
         }
     </script>
+    <script src="/breadcrumb.js"> </script>
 </body>
 </html>
