@@ -12,11 +12,6 @@ body {
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #0A1828;
-}
-
 /* 🔹 Estilos del Navbar */
 .navbar {
     background-color: #8B0000;
