@@ -13,36 +13,30 @@
 
 <body>
 
-  <button onclick="toggleMenu()" class="menu-toggle">☰</button>
+  <button id="menu-toggle" class="menu-toggle">☰</button>
 
   <div class="navbar">
     <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
-    <span class="logo">Calendario Deportivo</span>
+    <span class="logo">Calendario ADARS</span>
 
   </div>
 
   <div id="sidebar" class="sidebar">
-    <a href="javascript:void(0);" onclick="toggleSection('noticias'); cerrarMenu(); return false;">Eventos</a>
+    <a href="#" onclick="toggleSection('noticias'); cerrarMenu(); return false;">Eventos</a>
 
     <div class="menu-item">
-      <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-calendario'); return false;">Calendario 2025 <span
-          class="flecha">&#9662;</span></a>
-      <div class="submenu">
+      <a href="#" onclick="toggleSubmenu('submenu-calendario'); return false;">Calendario 2025 <span
+          class="flecha">&#9662;</span>
+      </a>
+      <div id="submenu-calendario" class="submenu">
         <a href="eventos/2025/febrero/index.html">Febrero</a>
         <a href="eventos/2025/marzo/index.html">Marzo</a>
-        <!-- a href="eventos/2025/mayo/index.html">Mayo</a>
-          <a href="eventos/2025/junio/index.html">Junio</a>
-          <a href="eventos/2025/julio/index.html">Julio</a>
-          <a href="eventos/2025/agosto/index.html">Agosto</a>
-          <a href="eventos/2025/setiembre/index.html">Setiembre</a>
-          <a href="eventos/2025/octubre/index.html">Octubre</a>
-          <a href="eventos/2025/noviembre/index.html">Noviembre</a>
-          <a href="eventos/2025/diciembre/index.html">Diciembre</a-->
+        <!-- a href="eventos/2025/mayo/index.html">Mayo</a-->
       </div>
     </div>
 
     <div class="menu-item">
-      <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-clubs'); return false;">Clubs Certificados <span
+      <a href="#" onclick="toggleSubmenu('submenu-clubs'); return false;">Clubs Certificados <span
           class="flecha">&#9662;</span></a>
       <div id="submenu-clubs" class="submenu">
         <a href="clubs/academiahg.html">
@@ -64,7 +58,7 @@
     </div>
 
     <div class="menu-item">
-      <a href="javascript:void(0);" onclick="toggleSubmenu('submenu-deportes'); return false;">Deportes <span
+      <a href="#" onclick="toggleSubmenu('submenu-deportes'); return false;">Deportes <span
           class="flecha">&#9662;</span></a>
       <div id="submenu-deportes" class="submenu">
         <a href="deportes/ciclismo.html" onclick="mostrarEvent('Ciclismo')">Ciclismo</a>
@@ -74,8 +68,8 @@
       </div>
     </div>
 
-    <a href="javascript:void(0);" onclick="toggleSection('talleres'); return false;">Talleres</a>
-    <a href="javascript:void(0);" onclick="toggleSection('comida'); return false;">Comida Saludable</a>
+    <a href="#" onclick="toggleSection('talleres'); return false;">Talleres</a>
+    <a href="#" onclick="toggleSection('comida'); return false;">Comida Saludable</a>
   </div>
 
 
