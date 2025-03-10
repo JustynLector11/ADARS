@@ -474,9 +474,9 @@ body {
 /* 🔹 Menú lateral en móviles */
 @media (max-width: 768px) {
   .sidebar {
-    left: -250px; /* Oculto fuera de la pantalla */
-    width: 250px; 
-    height: 100%;
+    left: 0 !important; /* Asegura que esté visible */
+    position: static; /* Evita que se comporte como un menú móvil */
+    width: auto; /* Opcional, ajusta según diseño */
   }
   
   .sidebar.active {
