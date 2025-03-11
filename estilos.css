@@ -29,6 +29,7 @@ body {
 
 /* 🔹 Estilos del Menú Lateral */
 .sidebar {
+    display: block;
     position: fixed;
     left: -250px;
     top: 0;
